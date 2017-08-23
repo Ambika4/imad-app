@@ -21,7 +21,7 @@ app.get('/article-three', function (req, res) {
   res.send('Article three requested and will be servered there');
 });
 
-app.get('/ui/style.css', function (req, res) {
+app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
