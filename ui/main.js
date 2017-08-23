@@ -1,16 +1,9 @@
 console.log('Loaded!');
 //change the text
-var element = document.getElementById('main-text');
-element.innerHTML='New value';
-//now move  the element
-
-var element = document.getElementById('madi');
-var marginLeft=0;
-function moveRight(){
-    marginLeft=marginLeft + 10;
-    madi.style.marginLeft=marginLeft + 'px';
-}
-madi.onclick =function()
-{
-    var interval = setInterval(moveRight,100);
+var counter =0;
+var button = document.getElementById('counter');
+button.onclick =function(){
+    counter=counter+ 1; 
+    var span document.getElementById('count');
+    span.innerHTML=counter.toString();
 };
