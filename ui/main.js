@@ -17,7 +17,7 @@ button.onclick =function(){
             }
         }
     };
-    request.open('GET','http://kambika1309.imad.hasura-app.io/counter');
+    request.open('GET','http://kambika1309.imad.hasura-app.io/counter',true);
     request.send(null);
     
 };
