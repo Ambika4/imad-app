@@ -18,6 +18,6 @@ button.onclick =function(){
         }
     };
     request.open('GET','http://kambika1309.imad.hasura-app.io/counter');
-    counter=counter + 1; 
+    request.send(null);
     
 };
