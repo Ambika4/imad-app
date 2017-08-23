@@ -1,4 +1,4 @@
-console.log('Loaded!');
+
 //change the text
 
 var button = document.getElementById('counter');
