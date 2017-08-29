@@ -42,7 +42,7 @@ var names = [];
 app.get('/submit-name/:name', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
   
-  var name=rect.params.name;
+  var name=req.params.name;
   names.push(name);
   
   res.send(JSON.stringyfy(names));
