@@ -18,7 +18,7 @@ span.innerHTML = counter.toString();
   }
 };
 //Make A Request
-request.open('GET', 'http://shubhamshekhar089.imad.hasura-app.io/counter', true);
+request.open('GET', 'http://kambika1309.imad.hasura-app.io/counter', true);
 request.send(null);
 };
 //submit name
