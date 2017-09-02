@@ -29,14 +29,30 @@ submit.onclick=function(){
   //make the request to the server and send the name
   
   //capture a list of names and render it as a list
-  var names = ['name1','name2','name3','name4'];
+  var request = new XMLHttpRequest();
+//Capture The Response And Store In HTML
+request.onreadystatechange = function() {
+  if (request.readyState === XMLHttpRequest.DONE) 
+   {
+//Take Some Action
+    if (request.status === 200) 
+      { 
+       var names = request.responseText;
+       names=JSON.parse(names);
   var list = '';
   for(var i=0; i< names.length; i++){
       list += '<li>' + names[i] + '</li>' ;
   }
   var ul = document.getElementById('namelist');
   ul.innerHTML = list;
+      }
+   }
 };
+//Make A Request
+request.open('GET', 'http://kambika1309.imad.hasura-app.io/submit-name?name='+name, true);
+request.send(null);
+};
+  
 
 
 
