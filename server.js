@@ -8,7 +8,35 @@ var Pool = require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne={
+    title:'Article One | Ambika Kumari',
+    heading:'Article One ',
+    date:'2nd sept 2017',
+    content : ` <p> 
+        This is first content.I m in 3rd year . A lot of things I need to do to make my life better .I m interseted in coding field .It takes time but at the end result is awesome.
+        </p>
+         <p> 
+        This is first content.I m in 3rd year . A lot of things I need to do to make my life better .I m interseted in coding field .It takes time but at the end result is awesome.
+        </p>
+         <p> 
+        This is first content.I m in 3rd year . A lot of things I need to do to make my life better .I m interseted in coding field .It takes time but at the end result is awesome.
+        </p> 
+        `
+};
 
+var htmlTemplate=`
+<html>
+  <head>
+     <tiltle>
+       ${title}
+       </title>
+       <meta name="viewport" content="width-device-width,initial-scale-1"/>
+        <link href="/ui/style.css" rel="stylesheet"/>
+        </head>
+        <body>
+          <div class="container">
+          <div>
+`
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
