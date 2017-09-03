@@ -23,7 +23,10 @@ var articleOne={
         </p> 
         `
 };
-
+function createTemplate(data){
+    var title =data.title;
+    var heading = data.heading;
+    var date = data.date;
 var htmlTemplate=`
 <html>
   <head>
@@ -51,6 +54,8 @@ var htmlTemplate=`
           </body>
           </html>
           `;
+          return htmlTemplate;
+}
 `
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
