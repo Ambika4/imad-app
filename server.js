@@ -36,6 +36,21 @@ var htmlTemplate=`
         <body>
           <div class="container">
           <div>
+          <a href ="/">Home</a>
+          </div>
+          <hr/>
+          <h3>
+          ${heading}
+          </h3>
+          <div>
+          ${date}
+          </div>
+          <div>
+          ${content}
+          </div>
+          </body>
+          </html>
+          `;
 `
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
